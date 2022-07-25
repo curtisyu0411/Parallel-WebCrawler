@@ -11,15 +11,24 @@ Q1. Run the web crawler using the configurations located at src/main/config/writ
 
     Why did the parser take more time when run with ParallelWebCrawler?
 
+    Since parallel webcrawler uses multi-threads, it will download more pages than sequential webcrawler. This means more data
+    to parse using PageParserImpl. So the parallelWebCrawler take more time to parse the page.
+
 
 Q2. Your manager ran your crawler on her old personal computer, using the configurations from Q1, and she notices that
     the sequential crawler actually outperforms the parallel crawler. She would like to know why.
 
     (a) Suggest one reason why the sequential web crawler was able to read more web pages than the parallel crawler.
         (Hint: Try setting "parallelism" to 1 in the JSON configs to simulate your manager's computer.)
+    Since her old PC may not support multi-threading code. So only one thread is running in parallel webcrawler. Since
+    parallel webcrawler use fork-join pool and locks to perform parallel processing, these steps might drag the performance
+    down so that sequential web crawler was able to read more web pages than the parallel crawler.
 
     (b) Suggest one scenario in which the parallel web crawler will almost certainly perform better than the sequential
         crawler. Why will it perform better?
+    When using a computer that support multi-threading, parallel web crawler will perform better than a sequential crawler.
+    Since in a given interval, parallel crawler is able to download several pages at the same time which will be faster than the
+    sequential web crawler.
 
 
 Q3. Analyze your method profiler through the lens of Aspect Oriented Programming, by answering the following questions:
