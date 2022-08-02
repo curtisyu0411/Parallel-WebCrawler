@@ -34,8 +34,9 @@ Q2. Your manager ran your crawler on her old personal computer, using the config
 Q3. Analyze your method profiler through the lens of Aspect Oriented Programming, by answering the following questions:
 
     (a) What cross-cutting concern is being addressed by the com.udacity.webcrawler.profiler.Profiler class?
-
+        Logging the method calls that are needed to be recorded.
     (b) What are the join points of the Profiler in the web crawler program?
+        The invocation of the methods.
 
 
 Q4. Identify three (3) different design patterns used in this project, and explain which interfaces, classes, and/or
