@@ -1,6 +1,6 @@
 {
-  "startPages": ["https://edstem.org/us/courses/23147/discussion/1601557"],
-  "ignoredUrls": ["https://blog.udacity.com/.*"],
+  "startPages": ["https://en.wikipedia.org/wiki/Web_crawler"],
+  "ignoredUrls": [],
   "ignoredWords": ["^.{1,3}$"],
   "parallelism": 4,
   "maxDepth": 10,

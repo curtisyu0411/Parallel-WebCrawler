@@ -1,9 +1,9 @@
 {
-  "startPages": ["https://www.udacity.com/"],
-  "ignoredUrls": ["https://blog.udacity.com/.*"],
+  "startPages": ["https://en.wikipedia.org/wiki/Web_crawler"],
+  "ignoredUrls": [],
   "ignoredWords": ["^.{1,3}$"],
   "implementationOverride": "com.udacity.webcrawler.SequentialWebCrawler",
-  "maxDepth": 2,
-  "timeoutSeconds": 1,
+  "maxDepth": 10,
+  "timeoutSeconds": 10,
   "popularWordCount": 5
 }
